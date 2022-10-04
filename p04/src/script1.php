@@ -17,7 +17,21 @@
 	</head>
 	<body>
 		<h1>RESPUESTA</h1>
+		<?php
+		$age = $_POST["edad"];
+        $sex = $_POST["sexo"];
 
+if ($age >18) {
+	if ($sex == "femenino" || $sex == "Femenino" || $sex == "FEMENINO" ||$sex=='masculino' ||$sex=='Masculino' ||$sex=='MASCULINO') {
+		echo '<h1>Bienvenida, usted está en el rango de edad permitido.</h1>';
+	} elseif ($age >=35) {
+		if ($sex == "femenino" || $sex == "Femenino" || $sex == "FEMENINO" ||$sex=='masculino' ||$sex=='Masculino' ||$sex=='MASCULINO')
+		echo '<h1>Bienvenido, usted no está en el rango de edad permitido.</h1>';
+	}
+} else {
+	echo "USTED NO TIENE PERMITIDO ENTRAR";
+}
+?>
 
 <?php
             $autos = array('UBN6338' => array(
